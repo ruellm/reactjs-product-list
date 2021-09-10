@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import MenuNav from './MenuNav'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -6,10 +6,12 @@ import ListProduct from './ListProduct';
 import ProductEdit from './ProductEdit';
 import AddProduct from "./AddProduct";
 
+import "../App.css";
+
 const Parent = ()=>{
     return (
         <Router>
-            <div>
+            <div className="mainboard">
                 <MenuNav />
                 <Switch>
                     <Route path={["/", "/list"]} exact component={ListProduct} />

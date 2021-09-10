@@ -1,7 +1,9 @@
-import React, {useEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { removeProduct } from "../actions/actionCreators";
 import { Link } from 'react-router-dom';
+
+import "../App.css"
 
 const ProductItem = (props) => {    
     
@@ -12,16 +14,20 @@ const ProductItem = (props) => {
     };
 
     return(
-        <div>
-            <div>
-                {props.id} {props.name}
-                <Link to={`/edit/${props.id}`}>
-                    <button type='button'> Edit/View </button>
-                </Link>
-                <button onClick={()=>remove(props.id)}>✖</button>
-            </div>
-        
-            <hr />
+        <div className='product-container'>
+            <span>
+                {props.id}
+            </span>
+            <span>
+                {props.name}
+            </span>
+            <span>
+            <Link to={`/edit/${props.id}`}>
+                <button type='button'> Edit/View </button>
+            </Link>
+            
+            <button onClick={()=>remove(props.id)}>✖</button>
+            </span>
         </div>
     );
 };

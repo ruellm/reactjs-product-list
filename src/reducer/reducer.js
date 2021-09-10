@@ -37,7 +37,7 @@ export function reducer(state = initialState, action)
 
         case actionTypes.UPDATE_PRODUCT:{
             return state.map(product => {
-                if(product.id == action.payload.id) {
+                if(product.id === action.payload.id) {
                     return Object.assign({}, action.payload);
                 }
                 return product;

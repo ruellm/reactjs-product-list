@@ -14,7 +14,7 @@ const ProductEdit = ({match}) => {
 
     useEffect(()=>{
         let p = store.getState().find(product => {
-            return (product.id == match.params.id);
+            return (product.id === match.params.id);
         });
         
         setCurrentProduct(p);
@@ -27,7 +27,7 @@ const ProductEdit = ({match}) => {
 
     return(
         <div>
-            <h1>Edit Product # {match.params.id}</h1>
+            <h2 align='center'>Edit Product # {match.params.id}</h2>
 
             { currentProduct ?
                     <ProductForm onSubmit={handleUpdate} {...currentProduct}/>:

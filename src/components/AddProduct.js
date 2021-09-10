@@ -1,4 +1,4 @@
-import React, {createRef, useEffect, useState} from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../actions/actionCreators';
 import ProductForm from "./ProductForm";
@@ -15,7 +15,7 @@ const AddProduct = ({match}) => {
 
     return(
         <div>
-            <h1>Add Product</h1>
+            <h2 align='center'>Add Product</h2>
             <ProductForm onSubmit={handleAdd}/>
         </div>
     );
