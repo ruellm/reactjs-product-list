@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import ListProduct from './ListProduct';
 import ProductEdit from './ProductEdit';
+import AddProduct from "./AddProduct";
 
 const Parent = ()=>{
     return (
@@ -12,7 +13,8 @@ const Parent = ()=>{
                 <MenuNav />
                 <Switch>
                     <Route path={["/", "/list"]} exact component={ListProduct} />
-                    <Route path={["/add", "/add/:id"]} exact component={ProductEdit} />
+                    <Route path={"/add"} exact component={AddProduct} />
+                    <Route path={"/edit/:id"} exact component={ProductEdit} />
                 </Switch>
             </div>
         </Router>

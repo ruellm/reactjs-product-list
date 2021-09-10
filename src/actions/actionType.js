@@ -1,3 +1,4 @@
-export const FETCH_STATE = 0;
-export const ADD_PRODUCT = 1;
-export const REMOVE_PRODUCT = 2;
+export const FETCH_STATE = "FETCH_STATE";
+export const ADD_PRODUCT = "ADD_PRODUCT";
+export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
+export const UPDATE_PRODUCT = "UPDATE_PRODUCT";

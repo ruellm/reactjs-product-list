@@ -1,10 +1,17 @@
 import * as actionType from '../actions/actionType'
 
 export const addProduct = payload =>(
-{
-    type: actionType.ADD_PRODUCT,
-    payload
-}
+    {
+        type: actionType.ADD_PRODUCT,
+        payload
+    }
+);
+
+export const updateProduct = payload =>(
+    {
+        type: actionType.UPDATE_PRODUCT,
+        payload
+    }
 );
 
 export const fetchState = () => ({
